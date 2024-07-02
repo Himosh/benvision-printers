@@ -76,10 +76,10 @@
     }
     .review-box {
         width: 100%; 
-        padding: 10px;
+        padding: 20px;
     }
     .review-content {
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 @media screen and (max-width: 430px) {
@@ -91,10 +91,11 @@
     }
     .review-grid {
         grid-template-columns: repeat(1, 1fr);
-        gap: 30px; /* One card per row for mobile screens */
+        gap: 30px;
+        padding: 0px 40px; /* One card per row for mobile screens */
     }
     .review-box {
-        width: 300px; 
-        margin-left: 60px;/* Adjust width for mobile screens */
+        width: 100%; 
+        /* Adjust width for mobile screens */
     }
 }
