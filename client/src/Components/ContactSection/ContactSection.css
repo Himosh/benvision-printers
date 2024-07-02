@@ -1,0 +1,83 @@
+#ContactSection {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 180px 11%;
+    margin-top: 50px;
+
+}
+
+#ContactSectionHead h2 {
+    color: #02075D;
+    font-size: 60px;
+    font-weight: 600;
+    margin-left:145px;
+    margin-top: 0px;
+
+}
+
+#ContactSectionHead p3 {
+    font-size: 20px;
+    font-weight: 100;
+    color: #02075D;
+    margin-left: 145px;
+
+}
+
+#ContactSectionCon{
+    margin-top: 30px;
+    margin-left: 145px;
+}
+
+#Name,
+#Email,
+#Phone,
+#Message{
+    font-size: 15px;
+    color: #02075D;
+    font-weight: 100;
+}
+
+#Input{
+    height: 30px;
+    width: 70%;
+    outline: none;
+    margin-top: 5px;
+    border-right-style: none;
+    border-left-style: none;
+    border-top-style: none;
+    border-bottom: 2px solid #02075D;
+    
+}
+
+#InputMessage{
+    height: 60px;
+    width: 70%;
+    outline: none;
+    margin-top: 5px;
+    border-right-style: none;
+    border-left-style: none;
+    border-top-style: none;
+    border-bottom: 2px solid #02075D;
+
+}
+
+#Contact2,
+#Contact3,
+#Contact4{
+    margin-top: 45px;
+}
+
+#SubmitButton {
+    background: linear-gradient(to right, #B66FC1, #465BC6);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 13px;
+    font-size: 13px;
+    align-items: center;
+    width: 125px;
+    margin-top: 40px;
+}
+

@@ -1,0 +1,39 @@
+.padding-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    justify-items: center;
+    align-content: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 25px;
+}
+.padding-container h2{
+    text-align: center;
+    margin-top: 20px;
+    color: #02075D;
+    font-weight: 600;
+}
+.padding-card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+}
+.padding-card{
+    display: flex;
+    overflow: hidden;
+    margin: 0px;
+    padding: 10px;
+    width: 100%; 
+    max-width: 100px; 
+    height: 100px; 
+    align-items: center;
+}

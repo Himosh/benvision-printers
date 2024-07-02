@@ -1,0 +1,127 @@
+.service-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;  
+    width: 100%; 
+    margin: 50px 100px;
+}
+
+.section-title {
+    color: #02075D;
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 0px 90px;
+}
+
+.service-box {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.service-img img {
+    width: 60%;
+    height: auto;
+    border-radius: 13px 13px 0 0;
+}
+
+.service-heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: #02075D;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.service-content {
+    font-size: 13px;
+    font-weight: 300;
+    color: #31363F;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.view-more-button {
+    margin-top: 20px;
+}
+
+.view-more-btn {
+    background: linear-gradient(to right, #B66FC1, #465BC6);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 13px;
+    font-size: 13px;
+    width: 125px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .service-section {
+        margin: 20px 60px;
+    }
+    .section-title {
+        color: #02075D;
+        font-size: 50px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 50px;
+        white-space: nowrap; /* Ensures text doesn't wrap */
+        overflow: hidden; /* Ensures text that exceeds width is hidden */
+        text-overflow: ellipsis; /* Adds ellipsis (...) for overflow */
+    }
+    
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0px 30px; /* One card per row for mobile screens */
+    }
+    .service-box {
+        width: 100%;
+     /* Full width for each card on mobile screens */
+    }
+}
+@media screen and (max-width: 430px) {
+    .service-section {
+        margin: 20px 60px;
+    }
+    .section-title {
+        color: #02075D;
+        font-size: 32px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 50px;
+        white-space: nowrap; /* Ensures text doesn't wrap */
+        overflow: hidden; /* Ensures text that exceeds width is hidden */
+        text-overflow: ellipsis; /* Adds ellipsis (...) for overflow */
+    }
+    
+    .service-grid {
+        grid-template-columns: repeat(1, 1fr); /* One card per row for mobile screens */
+    }
+    .service-box {
+        width: 100%;
+         /* Full width for each card on mobile screens */
+    }
+}

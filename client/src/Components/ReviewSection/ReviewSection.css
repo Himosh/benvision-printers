@@ -1,0 +1,100 @@
+.review-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;  
+    width: 100%; 
+    margin: 50px 100px;
+}
+
+.section-title-review {
+    color: #02075D;
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 90px;
+    gap: 0px;
+}
+
+.review-box {
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.review-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.review-heading {
+    font-size: 20px;
+    font-weight: 500;
+    color: #02075D;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.review-content {
+    font-size: 13px;
+    font-weight: 300;
+    color: #31363F;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .review-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 736px) {
+    .review-section {
+        margin: 20px 60x;
+    }
+    .section-title-review {
+        font-size: 50px;
+    }
+    .review-grid {
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 0px;
+        gap: 10px;
+    }
+    .review-box {
+        width: 100%; 
+        padding: 10px;
+    }
+    .review-content {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 430px) {
+    .review-section {
+        margin: 20px 80px;
+    }
+    .section-title-review {
+        font-size: 32px;
+    }
+    .review-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px; /* One card per row for mobile screens */
+    }
+    .review-box {
+        width: 300px; 
+        margin-left: 60px;/* Adjust width for mobile screens */
+    }
+}
