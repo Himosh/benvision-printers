@@ -10,7 +10,8 @@
     justify-items: center;
     align-content: center;
     background-color: white;
-    padding: 15px;
+    /* background-color: #F5F5; */
+    padding: 30px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -50,7 +51,6 @@
     background-color: rgba(70, 91, 198, 0.17);
   }
 .selected {
-    /* border: 1px solid blue; */
     background-color: rgba(70, 91, 198, 0.17);
   }
 .copy-card-small{
@@ -122,8 +122,7 @@
 }
 @media screen and (max-width: 438px){
     .copy-container{
-        margin-left: 20px;
-        margin-right: 50px;
+        width: 100%;
     }
     .copy-container-card{
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -140,7 +139,7 @@
         margin: 0px;
         margin-left: 50px;
         border: 1px solid rgba(2, 7, 93, 4.7);
-        border-radius: 15px;
+        border-radius: 10px;
         padding: 16px;
         width: 100%; 
         max-width: 120px; 
@@ -156,7 +155,7 @@
         margin: 0px;
         margin-right: 50px;
         border: 1px solid rgba(2, 7, 93, 4.7);
-        border-radius: 15px;
+        border-radius: 10px;
         padding: 16px;
         width: 100%; 
         max-width: 120px; 

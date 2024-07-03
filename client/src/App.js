@@ -5,6 +5,7 @@ import OrderDetailsPage from './Pages/OrderDetailsPage/OrderDetailsPage';
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import Footer from './Components/Footer/Footer';
 import NavBar from './Components/NavBar/NavBar';
+import SummaryPage from './Pages/SummaryPage/SummaryPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/OrderDetailsPage" element={<OrderDetailsPage />} />
+            <Route path='/Summary' element={<SummaryPage />} />
           </Routes>
           <Footer />
         </div>

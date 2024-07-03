@@ -18,8 +18,8 @@ function PageSize() {
           >
             <img src={item.image} alt='' />
             <div className="text-content">
-              <h1>{item.size}</h1>
-              <p>{item.width} x {item.height}mm</p>
+              <h3>{item.size}</h3>
+              <h4>{item.width} x {item.height}mm</h4>
             </div>
           </div>
         ))}
