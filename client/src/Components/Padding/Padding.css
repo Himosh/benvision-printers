@@ -26,6 +26,7 @@
     justify-content: center;
     justify-items: center;
     align-content: center;
+    padding: 10px;
 }
 .padding-card{
     display: flex;
@@ -36,4 +37,10 @@
     max-width: 100px; 
     height: 100px; 
     align-items: center;
+    cursor: pointer;
+}
+.padding-card.selected {
+ width: 90px;
+ border-radius: 5px;
+ /* padding: 0px 0px; */
 }

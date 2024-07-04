@@ -1,0 +1,14 @@
+<svg width="63" height="94" viewBox="0 0 63 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_512_13" fill="white">
+<path d="M16 65L16 0H63L63 65H16Z"/>
+</mask>
+<path d="M16 65L16 0H63L63 65H16Z" fill="#8082AD"/>
+<path d="M63 0H64.5C64.5 -0.82843 63.8284 -1.5 63 -1.5V0ZM63 65V66.5C63.8284 66.5 64.5 65.8284 64.5 65H63ZM16 1.5H63V-1.5H16V1.5ZM61.5 0L61.5 65H64.5V0H61.5ZM63 63.5H16V66.5H63V63.5Z" fill="#02075D" mask="url(#path-1-inside-1_512_13)"/>
+<path d="M48 13.3957L16 0V63.887L48 79V13.3957Z" fill="#02075D"/>
+<mask id="path-4-inside-2_512_13" fill="white">
+<path d="M1 79L1 13H48L48 79H1Z"/>
+</mask>
+<path d="M1 79L1 13H48L48 79H1Z" fill="#8082AD"/>
+<path d="M48 13H49.5C49.5 12.1716 48.8284 11.5 48 11.5V13ZM48 79V80.5C48.8284 80.5 49.5 79.8284 49.5 79H48ZM1 14.5H48V11.5H1L1 14.5ZM46.5 13L46.5 79H49.5L49.5 13H46.5ZM48 77.5H1L1 80.5H48V77.5Z" fill="#02075D" mask="url(#path-4-inside-2_512_13)"/>
+<path d="M33 27.3957L1 14V77.887L33 93V27.3957Z" fill="white" stroke="#02075D"/>
+</svg>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './NavBar.css'
-import BenLogo from '../../Assets/LandingPage/benVision.png'
+import BenLogo from '../../Assets/LandingPage/benVision.svg'
 import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

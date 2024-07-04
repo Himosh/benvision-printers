@@ -5,6 +5,8 @@ import ServiceSection from "../../Components/ServiceSection/ServiceSection";
 import ReviewSection from "../../Components/ReviewSection/ReviewSection";
 import Footer from "../../Components/Footer/Footer";
 import './LandingPage.css';
+import ContactSection from '../../Components/ContactSection/ContactSection';
+
 
 function LandingPage(props) {
     return (
@@ -12,6 +14,7 @@ function LandingPage(props) {
             <HeroSection/>
             <ServiceSection/>
             <ReviewSection/>
+            <ContactSection/>
         </div>
     );
 }

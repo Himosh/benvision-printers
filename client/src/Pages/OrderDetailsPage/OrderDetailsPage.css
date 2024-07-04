@@ -107,6 +107,12 @@
     color: #02075D;
     font-weight: 600;
 }
+.warning {
+    color: red;
+    font-weight: 500;
+    margin-top: 40px;
+  }
+  
 
 /* ............................................. */
 

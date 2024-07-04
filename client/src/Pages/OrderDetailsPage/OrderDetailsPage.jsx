@@ -10,24 +10,42 @@ import CoverDetails from '../CoverDetails/CoverDetails';
 import OtherDetails from '../OtherDetails/OtherDetails';
 import { fa1, fa2,fa3 ,faCheck} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useNavigate } from 'react-router-dom';
 
 function OrderDetailsPage() {
-  const { selectedPageSize } = useAppContext();
-  const [selectedPageSizeId, setSelectedPageSizeId] = useState(null);
-  const [selectedColor, setSelectedColor] = useState(null);
+  // const { selectedPageSize } = useAppContext();
+  // const [selectedPageSizeId, setSelectedPageSizeId] = useState(null);
+  // const [selectedColor, setSelectedColor] = useState(null);
 
-  
+  const navigate = useNavigate();
+  const { 
+    selectedPageSizeId,
+    selectedPaperColour,
+    selectedCopySide,
+    selectedCopyColour,
+    selectedFrontMaterial,
+    selectedFrontMaterialColour,
+    selectedBackMaterial,
+    selectedBackMaterialColour,
+    selectedBindingOption,
+    selectedPaddingOption,
+    selectedFoldingOption,
+    selectedPaperType,
+    selectedStaplingOption
+   } = useAppContext();
+
   const [isDoneOne, setIsDoneOne] = useState(false)
   const [isDoneTwo, setIsDoneTwo] = useState(false)
   const [isDoneThree, setIsDoneThree] = useState(false)
+  const [warning, setWarning] = useState('');
 
-  const handleSelectedPageSize = (id) => {
-    setSelectedPageSizeId(id);
-  };
+  // const handleSelectedPageSize = (id) => {
+  //   setSelectedPageSizeId(id);
+  // };
 
-  const handleSelectedColor = (color) => {
-    setSelectedColor(color);
-  };
+  // const handleSelectedColor = (color) => {
+  //   setSelectedColor(color);
+  // };
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -37,14 +55,33 @@ function OrderDetailsPage() {
   };
 
   const onClickOne = () => {
-      setIsDoneOne(true);
-      scrollToTop();
-  }
+    if (!selectedPageSizeId) {
+        setWarning('Please select a page size before proceeding...');
+        scrollToTop();
+    } else if (!selectedPaperColour) {
+        setWarning('Please select a page colour before proceeding...');
+        scrollToTop();
+    } else if (!selectedCopySide || !selectedCopyColour) {
+        setWarning('Please select a copy side and colour before proceeding...');
+        scrollToTop();
+    } else {
+        setIsDoneOne(true);
+        scrollToTop();
+        setWarning('');
+    }
+};
 
-  const onClickTwo = () => {
-      setIsDoneTwo(true);
-      scrollToTop();
+const onClickTwo = () => {
+  if (!selectedFrontMaterial || !selectedFrontMaterialColour || !selectedBackMaterial || !selectedBackMaterialColour) {
+    setWarning('Please select all cover details before proceeding.');
+    scrollToTop();
+  } else {
+    setIsDoneTwo(true);
+    scrollToTop();
+    setWarning('');
   }
+};
+
 
   const onClickBack = () => {
     setIsDoneOne(false);
@@ -55,13 +92,28 @@ function OrderDetailsPage() {
   }
 
   const onClickThree = () => {
-    setIsDoneThree(true);
-    scrollToTop();
-  }
+    if (!selectedBindingOption || !selectedPaddingOption || !selectedFoldingOption || !selectedPaperType || !selectedStaplingOption) {
+      setWarning('Please select all other details before finishing.');
+      scrollToTop();
+    } else {
+      setIsDoneThree(true);
+      setWarning('');
+      navigate('/summary');
+    }
+  };
+  
 
   return (
     <div className="order-page-container">
+      {!isDoneOne && !isDoneTwo && !isDoneThree && (
       <h1>Select your requirements here!</h1>
+      )}
+       {isDoneOne && !isDoneTwo && !isDoneThree && (
+      <h1>Great, One step more...</h1>
+      )}
+        {isDoneOne && isDoneTwo && !isDoneThree && (
+      <h1>Whoo! You're almost done.</h1>
+      )}
       <div className="progress-bar-container">
         <div className="progress-container-one">
             <div className="progress-circle">
@@ -84,6 +136,7 @@ function OrderDetailsPage() {
             <p>choose other details</p>
         </div>
       </div>
+      {warning && <p className="warning">{warning}</p>}
       <div className={`step-one ${isDoneOne? 'hide' : ''}`}>
         <PaperDetails />
       </div>
@@ -103,9 +156,9 @@ function OrderDetailsPage() {
        </div>
        <div className={`button-container-two ${isDoneTwo? 'show' : ''}`}>
           <button className='progress-button' onClick={onClickBackTwo}>Back</button>
-          <Link to="/summary">
+          {/* <Link to="/summary"> */}
           <button className='progress-button' onClick={onClickThree}>Finish</button>
-          </Link>
+          {/* </Link> */}
         </div>
       </div>
     </div>  
